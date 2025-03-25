@@ -34,23 +34,30 @@
     <script>navigator.serviceWorker.register('service-worker.js');</script>
 </body>
 <script>
+    // Función para establecer una cookie
     function setCookie(name, value, hours) {
-        var date = new Date();
-        date.setTime(date.getTime() + (hours * 60 * 60 * 1000));
-        var expires = "expires=" + date.toUTCString();
-        document.cookie = name + "=" + value + ";" + expires + ";path=/;Secure;SameSite=Strict";
+        var d = new Date();
+        d.setTime(d.getTime() + (hours * 60 * 60 * 1000)); // Expiración
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
     }
 
+    // Función para obtener una cookie
     function getCookie(name) {
-        var nameEQ = name + "=";
+        var nameEq = name + "=";
         var ca = document.cookie.split(';');
         for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            var c = ca[i].trim();
+            if (c.indexOf(nameEq) === 0) return c.substring(nameEq.length, c.length);
         }
-        return null;
+        return "";
+    }
+
+    // Función para eliminar una cookie
+    function deleteCookie(name) {
+        setCookie(name, "", -1); // Establecer la fecha de expiración en el pasado
     }
 </script>
+
 
 </html>
