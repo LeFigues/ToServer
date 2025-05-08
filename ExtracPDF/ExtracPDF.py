@@ -4,10 +4,10 @@ import json
 import os
 
 # Rutas absolutas
-#INPUT_FOLDER = r"C:\Users\figue\OneDrive\Escritorio\uflid\forecast-labs\project\labs_f_api\fl_api\ExtracPDF\Input"
-#OUTPUT_FOLDER = r"C:\Users\figue\OneDrive\Escritorio\uflid\forecast-labs\project\labs_f_api\fl_api\ExtracPDF\Output"
-INPUT_FOLDER = "/var/www/forecastlabs/web_forecast/ExtracPDF/Input"
-OUTPUT_FOLDER = "/var/www/forecastlabs/web_forecast/ExtracPDF/Output"
+INPUT_FOLDER = r"C:\Users\figue\OneDrive\Escritorio\uflid\forecast-labs\project\labs_f_api\fl_api\ExtracPDF\Input"
+OUTPUT_FOLDER = r"C:\Users\figue\OneDrive\Escritorio\uflid\forecast-labs\project\labs_f_api\fl_api\ExtracPDF\Output"
+#INPUT_FOLDER = "/var/www/forecastlabs/web_forecast/ExtracPDF/Input"
+#OUTPUT_FOLDER = "/var/www/forecastlabs/web_forecast/ExtracPDF/Output"
 def parse_materiales(text_block):
     materiales = []
     current = None
