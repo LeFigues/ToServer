@@ -1,6 +1,0 @@
-﻿namespace chatbot_api.Controllers
-{
-    public class SystemConfig
-    {
-    }
-}
