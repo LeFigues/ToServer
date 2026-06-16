@@ -134,7 +134,7 @@ function printByElementIdAuto(elementId, title) {
     printWindow.document.write('<html><head><title>' + (title || 'Imprimir') + '</title>');
     printWindow.document.write('<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">');
     printWindow.document.write('<style>');
-    printWindow.document.write('@page { size: auto; margin: 6mm; }');
+    printWindow.document.write('@page { size: auto; margin: 5mm 3mm 3mm 3mm; }');
     printWindow.document.write('html, body { margin: 0; padding: 0; background: #fff !important; color: #000 !important; font-family: Arial, sans-serif; }');
     printWindow.document.write('* { color: #000 !important; box-sizing: border-box; }');
     printWindow.document.write('.print-area { width: 100%; background: #fff !important; }');
